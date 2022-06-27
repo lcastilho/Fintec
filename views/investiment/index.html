@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Luciano Castilho">
+    <meta name="generator" content="Visual Studio code">
+    <title>Fintec, Gestão financeira pessoal!</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbar-fixed/">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container-md">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Fintech</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0 ">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/views/index.html">DashBoard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/views/investiment/index.html">Investimentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/views/account/index.html">Conta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/views/user/index.html">Meus dados</a>
+            </li>            
+            <li class="nav-item">
+              <a class="nav-link" href="/">Sair</a>
+            </li>   
+          </ul>
+          <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+              <button class="btn btn-outline-primary" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>    
+  </div>
+  <section>
+    <div class="container-fluid mt-5 text-bg-primary">
+        <div class="mt-5 p-5">
+            <h1>Investimentos</h1>
+              <button  type="button" class="btn btn-success mt-5" data-bs-toggle="modal" data-bs-target="#ModalNovo" data-bs-whatever="Novo ativo">Novo</button>
+        </div>
+      </div>
+  </section>
+
+  <section>
+    <div class="container mt-5">
+      <div class="row row-cols-auto mb-5 ">
+        <div class="col-12 mb-5">
+          <h3>Lista de investimentos</h3>
+        </div>
+      </div>
+      <div class="row row-cols-auto mt-1 pt-3 pb-3 text-bg-dark">
+        <div class="col-md-1">&nbsp;</div>          
+        <div class="col-md-2" title="Ativo investido">
+          <span class="fw-bold">Ativo</span>
+        </div>        
+        <div class="col-md-2" title="Valor do investimento">
+          <span class="fw-bold">Valor Atual(R$)</span>
+        </div>
+        <div class="col-md-2" title="Resgate em">
+          <span class="fw-bold">Em</span>
+        </div>     
+      </div>
+
+      <div class="row row-cols-auto mt-1 pt-3 pb-3 bg-light">
+        <div class="col-md-1" title="Editar dados do investimento em Poupança">
+          <a href="#" tile="Editar ativo Poupança" data-bs-toggle="modal" data-bs-target="#ModalEditarAtivo" data-bs-whatever="@editarpoupanca"><i class="bi bi-pencil-square"></i></a>
+        </div>          
+        <div class="col-md-2" title="Investimento em Poupança">
+          <span class="fw-bold">Poupança</span>
+        </div>
+        <div class="col-md-2" title="Valor investido em Poupança">
+          <span>R$ 1.000,00</span>
+        </div>
+        <div class="col-md-2" title="Resgate do investimento em Poupança">
+          <span>01/01/2022</span>
+        </div>   
+      </div>     
+      <div class="row row-cols-auto mt-1 pt-3 pb-3">
+        <div class="col-md-1" title="Editar dados do investimento em LCI">
+          <a href="#" tile="Editar ativo LCI" data-bs-toggle="modal" data-bs-target="#ModalEditarAtivo" data-bs-whatever="@editarlci"><i class="bi bi-pencil-square"></i></a>
+        </div>          
+        <div class="col-md-2" title="Investimento em LCI">
+          <span class="fw-bold">LCI</span>
+        </div>
+        <div class="col-md-2" title="Valor investido em LCI">
+          <span>R$ 1.000,00</span>
+        </div>
+        <div class="col-md-2" title="Resgate do investimento em Poupança">
+          <span>01/01/2022</span>
+        </div>   
+      </div>         
+      <div class="row row-cols-auto mt-1 pt-3 pb-3 bg-light">
+        <div class="col-md-1" title="Editar dados do investimento em Bitcoins">
+          <a href="#" tile="Editar ativo Biticoins" data-bs-toggle="modal" data-bs-target="#ModalEditarAtivo" data-bs-whatever="@editarbitcoins"><i class="bi bi-pencil-square"></i></a>
+        </div>          
+        <div class="col-md-2" title="Investimento em Bitcoins">
+          <span class="fw-bold">Bitcoins</span>
+        </div>
+        <div class="col-md-2" title="Valor investido em Bitcoins">
+          <span>R$ 1.000,00</span>
+        </div>
+        <div class="col-md-2" title="Resgate do investimento em Bitcoins">
+          <span>01/01/2022</span>
+        </div>   
+      </div>         
+    </div>
+  </section>
+
+
+  <div class="modal fade" id="ModalNovo" tabindex="-1" aria-labelledby="ModalNovoExemplo" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalNovoExemplo">Novo Ativo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <div class="btn-group"> 
+                <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Selecione uma conta
+                </button>
+                <div class="dropdown-menu">
+                  <span class="dropdown-item">Viagem Miami</span>
+                  <span class="dropdown-item">Trocar carro</span>
+                  <span class="dropdown-item">Reforma casa</span>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="nome-ativo" class="col-form-label">Ativo:</label>
+              <input type="text" class="form-control" id="nome-ativo" maxlength="40">
+            </div>
+            <div class="mb-3">
+              <label for="valor-ativo" class="col-form-label">Valor investido (R$):</label>
+              <input type="number" class="form-control" id="valor-ativo">
+            </div>
+            <div class="mb-3">
+              <label for="aliquota-ativo" class="col-form-label">Aliquota(%):</label>
+              <input type="number" class="form-control" id="aliquota-ativo">
+            </div>   
+            <div class="mb-3">
+              <label for="nome-ativo" class="col-form-label">Resgate em:</label>
+              <input type="date" class="form-control" id="nome-ativo">
+            </div>                      
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div class="modal fade" id="ModalEditarAtivo" tabindex="-1" aria-labelledby="ModalEditarAtivo" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalEditarAtivo">Novo Ativo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <div class="btn-group"> 
+                <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Selecione uma conta
+                </button>
+                <div class="dropdown-menu">
+                  <span class="dropdown-item">Viagem Miami</span>
+                  <span class="dropdown-item">Trocar carro</span>
+                  <span class="dropdown-item">Reforma casa</span>
+                </div>
+              </div>
+            </div>            
+            <div class="mb-3">
+              <label for="nome-ativo" class="col-form-label">Ativo:</label>
+              <input type="text" class="form-control" id="nome-ativo" value="Poupança" maxlength="40">
+            </div>
+            <div class="mb-3">
+              <label for="valor-ativo" class="col-form-label">Valor investido (R$):</label>
+              <input type="number" class="form-control" id="valor-ativo" value="1000.00">
+            </div>
+            <div class="mb-3">
+              <label for="aliquota-ativo" class="col-form-label">Aliquota(%):</label>
+              <input type="number" class="form-control" id="aliquota-ativo" value="0.8">
+            </div>   
+            <div class="mb-3">
+              <label for="nome-ativo" class="col-form-label">Resgate em:</label>
+              <input type="date" class="form-control" id="nome-ativo" value="2022-12-01">
+            </div>                      
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Editar</button>
+        </div>
+      </div>
+    </div>
+  </div>    
+  <footer class="mt-5">
+    <div class="container mt-5">
+      <p class="mt-5 mb-3 text-muted text-center">&copy; Fintech 2022</p>
+    </div>
+  </footer>  
+</body>
+
+<!-- JavaScript Bundle with Popper -->
+
+</html>
